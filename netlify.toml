@@ -1,0 +1,35 @@
+[[redirects]]
+  from = "https://blog-mastykarz.netlify.com/*"
+  to = "https://blog.mastykarz.nl/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rss"
+  to = "/feed.xml"
+  status = 301
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"

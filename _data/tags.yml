@@ -1,0 +1,4 @@
+office-365:
+  description: Office 365 offers rich extensibility capabilities. If you however don't plan customizing your tenant thoroughly, you could expose your organization and its data to risks. Following articles offer you a set of tips and considerations to help you make the best use Office 365 in your organization.
+sharepoint-framework:
+  description: SharePoint Framework is a new development model for extending SharePoint to your need. Following articles offer you tips and considerations for extending SharePoint using the SharePoint Framework.

@@ -1,0 +1,380 @@
+/**
+ * 4. Content
+ * 4.1 Posts and Pages
+ * ----------------------------------------------------------------------------
+ */
+.post {
+  margin-bottom: 1.66667em;
+  position: relative;
+}
+
+.post-header {
+  margin-bottom: 1.66667em;
+}
+
+.post-title {
+  font-size: 1.66667rem;
+  margin: 0 0 0.5em;
+}
+
+.post-title a {
+  color: inherit;
+  border-bottom: 0;
+  box-shadow: none;
+}
+
+.post-thumbnail {
+  display: block;
+  margin-bottom: 1.66667em;
+  border: 0;
+  box-shadow: none;
+}
+
+.post-thumbnail img {
+  width: 100%;
+}
+
+.post-meta, .caption-text, figcaption {
+  color: $gray;
+  font-size: 0.77778rem;
+  line-height: 1.5;
+  margin-bottom: 0.75em;
+}
+
+.caption-text, figcaption {
+  margin-bottom: 1.66667em;
+  padding-top: 1%;
+  text-align: center; 
+}
+
+.post-content {
+  color: $gray-dark;
+}
+
+.post-tags,
+.post-share {
+  font-size: 0.77778rem;
+  line-height: 1.5;
+}
+
+.post-share-title {
+  color: $gray-darkest;
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.post-tags a,
+.post-share a {
+  display: inline-block;
+  margin-right: 10px;
+  border-bottom: 0;
+  box-shadow: none;
+  color: $color-accent;
+}
+
+.post-tags a:before {
+  content: "\0023";
+}
+
+.post-full .post-title {
+  font-size: 2.66667rem;
+  margin: 0;
+}
+
+.post-full .post-title:after {
+  background-color: $color-accent;
+  display: block;
+  content: "";
+  height: 1px;
+  margin-top: 0.35em;
+  width: 60px;
+}
+
+.post-full .post-meta {
+  margin-bottom: 1.42857em;
+}
+
+.post-full .post-tags {
+  margin-top: 2.14285em;
+}
+
+.comments-area,
+.read-next,
+.tagcloud,
+.newsletter-box {
+  margin-bottom: 3.33333em;
+  margin-top: 3.33333em;
+}
+
+.post-feed-title,
+.comments-title,
+.read-next-title,
+.tagcloud-title {
+  color: $gray-dark;
+  font-family: $font-primary;
+  font-size: 0.77778rem;
+  font-weight: normal;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  margin: 0 0 2.14285em;
+  text-transform: uppercase;
+}
+
+.post-feed-title:after,
+.comments-title:after,
+.read-next-title:after,
+.tagcloud-title:after,
+.page-header:after {
+  background-color: $color-accent;
+  display: block;
+  content: "";
+  height: 1px;
+  margin-top: 1.25em;
+  width: 60px;
+}
+
+.post-feed .post {
+  border-bottom: 1px solid $gray-lighter;
+}
+
+.post-feed .post-header {
+  margin-bottom: 0.83333em;
+}
+
+.post-feed .post-content {
+  font-size: 0.88889rem;
+  margin-bottom: 1.66667em;
+}
+
+.read-next .post-title {
+  font-size: 1.33333rem;
+}
+
+.read-next .post-meta {
+  margin-bottom: 0.5em;
+}
+
+.read-next .post-content {
+  font-size: 0.88889rem;
+  margin-bottom: 1.66667em;
+}
+
+.tagcloud a {
+  border: 1px solid $gray-lighter;
+  display: inline-block;
+  font-size: 0.77778rem;
+  line-height: 1.5;
+  margin: 0 0.25em 0.5em 0;
+  padding: 0.5em 0.75em;
+  text-decoration: none;
+}
+
+.tagcloud a:hover {
+  background: $color-accent;
+  color: #fff;
+}
+
+/* Newsletter */
+.newsletter-box {
+  border: 1px solid $gray-lighter;
+  box-sizing: border-box;
+  margin-bottom: 3.33333em;
+  margin-top: 3.33333em;
+  padding: 1.66667em;
+}
+
+.newsletter-box-title {
+  font-size: 1.33333rem;
+  margin: 0 0 0.41667em;
+}
+
+/* Archives */
+.page-header {
+  margin-bottom: 1.66667em;
+}
+
+.page-title {
+  font-size: 1.33333rem;
+  margin: 0;
+}
+
+.page-description {
+  font-size: 0.77778rem;
+  line-height: 1.5;
+  margin: 0.25em 0 0;
+}
+
+/* Error pages */
+.error-template {
+  background-color: $gray-darkest;
+  color: $gray-light;
+}
+
+.error-cover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  opacity: 0.15;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.error-template .site {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.error-template .site-content {
+  margin: 0;
+  text-align: center;
+}
+
+.error-code {
+  color: #fff;
+  font-size: 4rem;
+  margin: 0;
+}
+
+.error-link {
+  font-family: $font-secondary;
+  font-style: italic;
+}
+
+.error-link:hover {
+  color: $gray-light;
+}
+
+/* Hero section */
+.hero {
+  margin-bottom: 2.5em;
+}
+
+.hero:after {
+  background-color: $color-accent;
+  display: block;
+  content: "";
+  margin-top: 1.66667em;
+  height: 1px;
+  width: 60px;
+}
+
+.hero-text {
+  color: $gray-darkest;
+  font-family: $font-secondary;
+  font-size: 1.66667rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Featured posts */
+.featured-posts {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -0.83333em 2.5em;
+}
+
+.post-featured {
+   flex: 0 0 100%;
+}
+
+.post-featured .post-inside {
+  padding: 0 0.833333em;
+}
+
+.post-featured .post-thumbnail {
+  display: block;
+  height: 0;
+  padding-top: 60%;
+  position: relative;
+  width: 100%;
+}
+
+.post-featured img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.post-featured .post-header {
+  margin: 0;
+}
+
+.post-featured .post-meta {
+  margin-bottom: 0.5em;
+}
+
+.post-featured .post-content {
+  font-size: 0.88889rem;
+}
+
+.post-featured .post-content p {
+  margin-bottom: 0;
+}
+
+/**
+ * 4.2 Pagination
+ * ----------------------------------------------------------------------------
+ */
+.pagination {
+  margin-bottom: 3.33333em;
+  margin-top: 3.33333em;
+  text-align: center;
+}
+
+.pagination .nav-links {
+  padding: 0 60px;
+  position: relative;
+}
+
+.page-number {
+  color: $gray;
+  display: inline-block;
+  font-size: 0.77778rem;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.newer-posts,
+.older-posts {
+  height: 30px;
+  position: absolute;
+  top: 0;
+  width: 40px;
+  border: 0;
+  box-shadow: none;
+}
+
+.newer-posts {
+  left: 0;
+}
+
+.older-posts {
+  right: 0;
+}
+
+.ad {
+  margin-bottom: 1.66667em;
+}
+
+.js-search-results-data em {
+  font-style: normal;
+  background-color: yellow;
+}

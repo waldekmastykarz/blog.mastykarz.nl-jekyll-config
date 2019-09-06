@@ -1,0 +1,43 @@
+---
+layout: default
+title:
+---
+<main id="main" class="site-main">
+
+{% if page.url == "/" %}
+<div class="hero inner">
+    <p class="hero-text">{{ site.author.greetings }}</p>
+</div>        
+{% endif %}
+
+{% if page.url == "/" %}
+{% comment %}  Featured {% endcomment %}
+<div id="featured-posts" class="featured-posts">
+    {% for post in site.posts %}
+    {% if post.featured == true %}
+    {% include featuredbox.html %}
+    {% endif %}
+    {% endfor %}
+</div>
+
+{% endif%}
+
+{% comment %}  Posts Index  {% endcomment %}
+<div class="post-feed inner">
+    {% if page.url == "/" %}
+    <div class="post-feed-title">Latest Articles</div>
+    {% endif %}
+    <div class="post-feed inner-wide">
+        {% for post in paginator.posts %}
+            {% include postbox.html %}
+        {% endfor %}
+    </div>
+</div>
+{% comment %}  Pagination {% endcomment %}
+{% include pagination.html %}
+{% if site.mailchimp_url %}
+    {% include newsletter-box.html %}
+{% endif %}
+</main>
+
+

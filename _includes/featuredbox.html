@@ -1,0 +1,21 @@
+
+<article class="post post-featured has-image">
+    <div class="post-inside">
+        {% if post.image %}
+        <a href="{{ post.url | absolute_url }}" class="post-thumbnail"><picture>{% if post.image_webp %}<source srcset="{{ site.baseurl }}{{ post.image_webp }}" type="image/webp">{% endif %}<img src="{{ post.image | prepend: site.baseurl }}"
+                alt="{% if post.featured_image_alt %}{{ post.featured_image_alt }}{% else %}{{ post.title }}{% endif %}"></picture></a>
+        {% endif %}
+        <header class="post-header">
+            <div class="post-meta">
+                <time class="published" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %-d, %Y"
+                    }}</time>
+            </div>{% comment %}  .post-meta  {% endcomment %}
+            <h2 class="post-title">
+                <a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark">{{ post.title }}</a>
+            </h2>
+            <div class="post-content">
+                <p>{{ post.excerpt }}</p>
+            </div>{% comment %}  .post-content  {% endcomment %}
+        </header>{% comment %}  .post-header  {% endcomment %}
+    </div>{% comment %}  .post-inside  {% endcomment %}
+</article>{% comment %}  .post  {% endcomment %}

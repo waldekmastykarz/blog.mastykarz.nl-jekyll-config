@@ -1,0 +1,111 @@
+---
+layout: default
+disqus: false
+post_class: post-template
+---
+
+    <main id="main" class="site-main">
+    
+        <article class="post-full inner">
+
+            <header class="post-header">
+                <div class="post-meta">
+                    <time class="post-date" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %-d,
+                        %Y" }}</time>
+                </div>{% comment %}  .post-meta  {% endcomment %}
+                <h1 class="post-title">{{ page.title }}</h1>
+            </header>{% comment %}  .post-header  {% endcomment %}
+
+            {% if page.image %}
+            <div class="post-thumbnail">
+                <picture>
+                    {% if page.image_webp %}
+                    <source srcset="{{ site.baseurl }}{{ page.image_webp }}" type="image/webp">
+                    {% endif %}
+                    <img src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.title }}">
+                </picture>
+            </div>
+            {% endif %}
+            <div class="post-content">
+                {{content}}
+            </div>
+            <footer class="post-footer">
+                <div id="ad1" class="ad"></div>
+                <div class="post-share">
+                    <span class="post-share-title">Share:</span>
+                    <a target="_blank" href="https://twitter.com/share?text={{ page.title | url_encode }}&amp;url={{ site.production_url }}{{ page.url | remove_first: '/' }}">Twitter</a>
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.production_url }}{{ page.url | remove_first: '/' }}">Facebook</a>
+                </div>{% comment %}  .share-post  {% endcomment %}
+                {% if page.tags.size > 0 %}
+                <div class="post-tags">
+                    <span class="post-share-title">Tags:</span>
+                    {% for tag in page.tags %} {% if forloop.index == page.tags.size %}
+                    <a href='{{ site.baseurl }}/tag/{{ tag | downcase | replace: ' ', '- ' }}/'>{{ tag | camelcase }}</a>
+                    {% else %}
+                    <a href='{{ site.baseurl }}/tag/{{ tag | downcase | replace: ' ', '- ' }}/'>{{ tag | camelcase }}</a>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </footer>
+            {% if site.disqus %}
+            <section id="comments-area" class="comments-area">
+                <h2 class="comments-title">Comments</h2>
+                <div class="comments-inside">
+                    <div id="disqus_thread"></div>
+                </div>{% comment %}  .comments-inside  {% endcomment %}
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+                        Disqus.</a></noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>{% comment %}  .comments-area  {% endcomment %}
+            <script>
+                var disqus_shortname = '{{site.disqus}}';
+                var disqus_developer = 0;
+                (function () {
+                    var dsq = document.createElement('script');
+                    dsq.type = 'text/javascript';
+                    dsq.async = true;
+                    dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+
+            </section>
+            {% endif %}
+        </article>
+        {% if site.mailchimp_url %}
+            {% include newsletter-box.html %}
+        {% endif %}
+        <section class="read-next inner">
+            <h2 class="read-next-title">Read Next</h2>
+            {% if page.previous.url %}
+            <article class="post">
+                <header class="post-header">
+                    <div class="post-meta">
+                        <time class="published" datetime="{{page.previous.date | date: '%Y-%m-%d'}}">{{page.previous.date
+                            | date: "%B %-d, %Y"}}</time>
+                    </div>
+                    <h3 class="post-title"><a href="{{ site.baseurl }}{{page.previous.url}}">{{page.previous.title}}</a></h3>
+                    <div class="post-content">
+                        <p>{{ page.previous.excerpt }} </p>
+                    </div>
+                </header>
+            </article>
+            {% endif %}
+            {% if page.next.url %}
+            <article class="post">
+                <header class="post-header">
+                    <div class="post-meta">
+                        <time class="published" datetime="{{page.next.date | date: '%Y-%m-%d'}}">{{page.next.date |
+                            date: "%B %-d, %Y"}}</time>
+                    </div>
+                    <h3 class="post-title"><a href="{{ site.baseurl }}{{page.next.url}}">{{page.next.title}}</a></h3>
+                    <div class="post-content">
+                        <p>{{ page.next.excerpt }} </p>
+                    </div>
+                </header>
+            </article>
+            {% endif %}
+        </section>{% comment %}  .read-next  {% endcomment %}
+
+    </main>{% comment %}  .site-main  {% endcomment %}

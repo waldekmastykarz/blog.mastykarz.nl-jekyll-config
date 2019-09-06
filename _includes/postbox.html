@@ -1,0 +1,13 @@
+<article class="post">
+    <header class="post-header">
+        <div class="post-meta">
+            <time class="published" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        </div>{% comment %}  .post-meta  {% endcomment %}
+        <h2 class="post-title">
+            <a href="{{ post.url | absolute_url }}" rel="bookmark">{{ post.title }}</a>
+        </h2>
+    </header>{% comment %}  .post-header  {% endcomment %}
+    <div class="post-content">
+        <p>{{ post.excerpt }}</p>
+    </div>{% comment %}  .post-content  {% endcomment %}
+</article>

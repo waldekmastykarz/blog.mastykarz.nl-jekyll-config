@@ -1,0 +1,74 @@
+name: Waldek Mastykarz
+description: Innovation Matters
+long_description: 'Innovation Matters<br />Office Development MVP<br />ISSN 2210-9390'
+meta_description: 'Tips and best practices for customizing Office 365 and SharePoint by Waldek Mastykarz - Microsoft MVP and Head of Product at Rencore'
+favicon: 'favicon.png'
+baseurl: ''
+production_url: https://blog.mastykarz.nl # required by the theme
+url: https://blog.mastykarz.nl # required by jekyll-target-blank
+disqus: mastykarz
+ga_analytics: UA-3652888-1
+logo: assets/images/waldek.jpg
+
+# jekyll-seo-tag
+author:
+  name: Waldek Mastykarz
+  twitter: waldekm
+  image: waldek.jpg
+  # theme
+  greetings: 'Tips and best practices for customizing Office 365 and SharePoint by Waldek Mastykarz - Microsoft MVP and Head of Product at Rencore'
+twitter:
+  username: waldekm
+  card: summary_large_image
+social:
+  name: Waldek Mastykarz
+  links:
+    - https://twitter.com/waldekm
+    - https://www.facebook.com/waldek
+    - https://www.linkedin.com/in/waldekmastykarz
+    - https://github.com/waldekmastykarz
+
+# Social links
+facebook: 'waldek'
+github: 'waldekmastykarz'
+#medium: '@waldekm'
+linkedin: 'waldekmastykarz'
+
+# Navigation
+navigation:
+  - text: Home
+    url: /
+  - text: SharePoint Framework
+    url: /tag/sharepoint-framework/
+  - text: Office 365
+    url: /tag/office-365/
+  - text: Tools
+    url: /tools/
+  - text: About
+    url: /about/
+  - text: Search
+    url: /search/
+
+plugins_dir:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-tagsgenerator
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+  - jekyll-commonmark
+  - ./_plugins
+
+include:
+  - robots.txt
+
+paginate: 5
+paginate_path: /page/:num/
+
+# Build settings
+markdown: CommonMark
+commonmark:
+  options: ['UNSAFE']
+permalink: /:slug/
+timezone: Europe/Amsterdam
+sass:
+  style: compressed
